@@ -777,7 +777,11 @@
 				'a': 'Anastasiia Sabirova'
 			};
 		var person = persons.d;
-		var hsTime = '6:47';
+		var hsHours = '6';
+		var hsMinutes = '47';
+		var hsTime = function() {
+			return hsHours + ':' + hsMinutes;
+		};
 
 		// set person: ?p=d, ?p=a
 		if (!! urlParams.get('p')) {
@@ -787,6 +791,22 @@
 		// set time
 		if(!! urlParams.get('t')) {
 			hsTime = urlParams.get('t');
+		}
+
+		// set hours
+		if (!! urlParams.get('h')) {
+			hsHours = urlParams.get('h');
+		}
+
+
+		// set minutes
+		if (!! urlParams.get('m')) {
+			hsMinutes = urlParams.get('m');
+		}
+
+		// help
+		if (urlParams.get('help') === '') {
+			document.write('<div style="margin-left: 20px;">URL queries: <br>p=d or p=a - person<br>t=7:34 - time<br>h=9 - hour<br>m=23 - minutes</div>');
 		}
 
 	</script>
@@ -847,7 +867,7 @@
 															+ ", " + weekdays[d.getDay()] 
 															+ " " + d.getDate() 
 															+ ", " + d.getFullYear() 
-															+ " " + hsTime + " AM";
+															+ " " + hsTime() + " AM";
 														document.write(dateText);
 													</script>
 												</div>
