@@ -770,6 +770,46 @@
 </head>
 
 <body class="" style="position: relative; min-height: 100%; top: 0px;">
+	<script>
+		const urlParams = new URLSearchParams(window.location.search);
+		const persons = {
+				'd': 'Daniil Sabirov',
+				'a': 'Anastasiia Sabirova'
+			};
+		var person = persons.d;
+		var hsHours = '6';
+		var hsMinutes = '47';
+		var hsTime = function() {
+			return hsHours + ':' + hsMinutes;
+		};
+
+		// set person: ?p=d, ?p=a
+		if (!! urlParams.get('p')) {
+			person = persons[urlParams.get('p')];
+		}
+
+		// set time
+		if(!! urlParams.get('t')) {
+			hsTime = urlParams.get('t');
+		}
+
+		// set hours
+		if (!! urlParams.get('h')) {
+			hsHours = urlParams.get('h');
+		}
+
+
+		// set minutes
+		if (!! urlParams.get('m')) {
+			hsMinutes = urlParams.get('m');
+		}
+
+		// help
+		if (urlParams.get('help') === '') {
+			document.write('<div style="margin-left: 20px;">URL queries: <br>p=d or p=a - person<br>t=7:34 - time<br>h=9 - hour<br>m=23 - minutes</div>');
+		}
+
+	</script>
 	<div class="main-body">
 		<div class="main-wrap container" id="doe_employee_layout">
 			<main>
@@ -790,7 +830,11 @@
 														d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z">
 													</path>
 												</svg>
-												<h2 class="card-title float-left ml-2">Daniil Sabirov</h2>
+												<h2 class="card-title float-left ml-2">
+													<script>
+														document.write(person);
+													</script>
+												</h2>
 												<div class="badge float-right badge-pill-student badge-pill"> </div>
 											</div>
 											<div class="card-body text-center p-4">
@@ -812,11 +856,18 @@
 												</div>
 												<div class="h1 text-success">
 													<script>
-														var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+														var monthNames = [
+															"January", "February", "March", "April", "May", "June", 
+															"July", "August", "September", "October", "November", "December"
+														];
 														var weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 												
 														var d = new Date();
-														var dateText = monthNames[d.getMonth()] + ", " + weekdays[d.getDay()] + " " + d.getDate() + ", " + d.getFullYear() + " 6:57 AM";
+														var dateText = weekdays[d.getDay()] 
+															+ ", " +  monthNames[d.getMonth()]
+															+ " " + d.getDate() 
+															+ ", " + d.getFullYear() 
+															+ " " + hsTime() + " AM";
 														document.write(dateText);
 													</script>
 												</div>
@@ -825,6 +876,7 @@
 														Please be advised that you must be wearing a face covering to
 														enter DOE facilities.
 													</div>
+	
 													<small class="d-block text-muted">Please re-take daily or
 														immediately if your symptoms change.</small>
 												</div>

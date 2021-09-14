@@ -863,8 +863,8 @@
 														var weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 												
 														var d = new Date();
-														var dateText = monthNames[d.getMonth()] 
-															+ ", " + weekdays[d.getDay()] 
+														var dateText = weekdays[d.getDay()] 
+															+ ", " +  monthNames[d.getMonth()]
 															+ " " + d.getDate() 
 															+ ", " + d.getFullYear() 
 															+ " " + hsTime() + " AM";
@@ -876,6 +876,7 @@
 														Please be advised that you must be wearing a face covering to
 														enter DOE facilities.
 													</div>
+	
 													<small class="d-block text-muted">Please re-take daily or
 														immediately if your symptoms change.</small>
 												</div>
