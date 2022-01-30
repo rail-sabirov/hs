@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en" class="k-webkit k-webkit93 fontawesome-i2svg-active fontawesome-i2svg-complete" style="height: 100%;">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>NYC DOE Health Screening</title>
+
+	<style type="text/css">
+		svg:not(:root).svg-inline--fa {
+			overflow: visible
+		}
+
+		.svg-inline--fa {
+			display: inline-block;
+			font-size: inherit;
+			height: 1em;
+			overflow: visible;
+			vertical-align: -.125em
+		}
+
+		.svg-inline--fa.fa-w-16 {
+			width: 1em
+		}
+
+		.fa-3x {
+			font-size: 3em
+		}
+
+		.fa-4x {
+			font-size: 4em
+		}
+
+		:root {
+			--blue: #41c7399;
+			--indigo: #6610f2;
+			--purple: #6f42c1;
+			--pink: #e83e8c;
+			--red: #dc3545;
+			--orange: #fd7e14;
+			--yellow: #ffc107;
+			--green: #28a745;
+			--teal: #3CAEA3;
+			--cyan: #17a2b8;
+			--white: #fff;
+			--gray: #6c757d;
+			--gray-dark: #343a40;
+			--primary: #3CAEA3;
+			--secondary: #8A9CAC;
+			--success: #28a745;
+			--info: #17a2b8;
+			--warning: #ffc107;
+			--danger: #dc3545;
+			--light: #f8f9fa;
+			--dark: #343a40;
+			--breakpoint-xs: 0;
+			--breakpoint-sm: 576px;
+			--breakpoint-md: 768px;
+			--breakpoint-lg: 992px;
+			--breakpoint-xl: 1200px;
+			--font-family-sans-serif: Arial, sans-serif;
+			--font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
+		}
+
+		*,
+		*::before,
+		*::after {
+			box-sizing: border-box
+		}
+
+		html {
+			font-family: sans-serif;
+			line-height: 1.15;
+			-webkit-text-size-adjust: 100%;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+		}
+
+		main {
+			display: block
+		}
+
+		body {
+			margin: 0;
+			font-family: Arial, sans-serif;
+			font-size: .875rem;
+			font-weight: 400;
+			line-height: 1.5;
+			color: #212529;
+			text-align: left;
+			background-color: #fff
+		}
+
+		[tabindex="-1"]:focus:not(:focus-visible) {
+			outline: 0 !important
+		}
+
+		h2 {
+			margin-top: 0;
+			margin-bottom: .5rem
+		}
+
+		small {
+			font-size: 80%
+		}
+
+		a {
+			color: #20639B;
+			text-decoration: none;
+			background-color: transparent
+		}
+
+		a:hover {
+			color: #133b5c;
+			text-decoration: underline
+		}
+
+		svg {
+			overflow: hidden;
+			vertical-align: middle
+		}
+
+		button:not(:disabled),
+		[type="button"]:not(:disabled),
+		[type="reset"]:not(:disabled),
+		[type="submit"]:not(:disabled) {
+			cursor: pointer
+		}
+
+		::-webkit-file-upload-button {
+			font: inherit;
+			-webkit-appearance: button
+		}
+
+		h2,
+		.h1,
+		.h2 {
+			margin-bottom: .5rem;
+			font-weight: 700;
+			line-height: 1.2
+		}
+
+		.h1 {
+			font-size: 1.64063rem
+		}
+
+		h2,
+		.h2 {
+			font-size: 1.3125rem
+		}
+
+		small {
+			font-size: 80%;
+			font-weight: 400
+		}
+
+		.container {
+			width: 100%;
+			padding-right: 15px;
+			padding-left: 15px;
+			margin-right: auto;
+			margin-left: auto
+		}
+
+		@media (min-width: 576px) {
+			.container {
+				max-width: 540px
+			}
+		}
+
+		@media (min-width: 768px) {
+			.container {
+				max-width: 720px
+			}
+		}
+
+		@media (min-width: 992px) {
+			.container {
+				max-width: 960px
+			}
+		}
+
+		@media (min-width: 1200px) {
+			.container {
+				max-width: 1140px
+			}
+		}
+
+		@media (min-width: 576px) {
+			.container {
+				max-width: 540px
+			}
+		}
+
+		@media (min-width: 768px) {
+			.container {
+				max-width: 720px
+			}
+		}
+
+		@media (min-width: 992px) {
+			.container {
+				max-width: 960px
+			}
+		}
+
+		@media (min-width: 1200px) {
+			.container {
+				max-width: 1140px
+			}
+		}
+
+		.row {
+			display: flex;
+			flex-wrap: wrap;
+			margin-right: -15px;
+			margin-left: -15px
+		}
+
+		.col-lg-8 {
+			position: relative;
+			width: 100%;
+			padding-right: 15px;
+			padding-left: 15px
+		}
+
+		@media (min-width: 992px) {
+			.col-lg-8 {
+				flex: 0 0 66.66667%;
+				max-width: 66.66667%
+			}
+
+			.offset-lg-2 {
+				margin-left: 16.66667%
+			}
+		}
+
+		.was-validated .custom-control-input:valid:focus:not(:checked)~.custom-control-label::before,
+		.custom-control-input.is-valid:focus:not(:checked)~.custom-control-label::before {
+			border-color: #28a745
+		}
+
+		.was-validated .custom-control-input:invalid:focus:not(:checked)~.custom-control-label::before,
+		.custom-control-input.is-invalid:focus:not(:checked)~.custom-control-label::before {
+			border-color: #dc3545
+		}
+
+		.btn {
+			display: inline-block;
+			font-weight: 400;
+			color: #212529;
+			text-align: center;
+			vertical-align: middle;
+			cursor: pointer;
+			user-select: none;
+			background-color: transparent;
+			border: 1px solid transparent;
+			padding: .375rem .75rem;
+			font-size: .875rem;
+			line-height: 1.5;
+			border-radius: .25rem;
+			transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			.btn {
+				transition: none
+			}
+		}
+
+		.btn:hover {
+			color: #212529;
+			text-decoration: none
+		}
+
+		.btn:focus {
+			outline: 0;
+			box-shadow: 0 0 0 .2rem rgba(60, 174, 163, 0.25)
+		}
+
+		.btn:disabled {
+			opacity: .65
+		}
+
+		.btn-primary:not(:disabled):not(.disabled):active,
+		.btn-primary:not(:disabled):not(.disabled).active {
+			color: #fff;
+			background-color: #2f887f;
+			border-color: #2c7f77
+		}
+
+		.btn-primary:not(:disabled):not(.disabled):active:focus,
+		.btn-primary:not(:disabled):not(.disabled).active:focus {
+			box-shadow: 0 0 0 .2rem rgba(89, 186, 177, 0.5)
+		}
+
+		.btn-secondary:not(:disabled):not(.disabled):active,
+		.btn-secondary:not(:disabled):not(.disabled).active {
+			color: #fff;
+			background-color: #6c8397;
+			border-color: #667c90
+		}
+
+		.btn-secondary:not(:disabled):not(.disabled):active:focus,
+		.btn-secondary:not(:disabled):not(.disabled).active:focus {
+			box-shadow: 0 0 0 .2rem rgba(122, 138, 152, 0.5)
+		}
+
+		.btn-success:not(:disabled):not(.disabled):active,
+		.btn-success:not(:disabled):not(.disabled).active {
+			color: #fff;
+			background-color: #1e7e34;
+			border-color: #1c7430
+		}
+
+		.btn-success:not(:disabled):not(.disabled):active:focus,
+		.btn-success:not(:disabled):not(.disabled).active:focus {
+			box-shadow: 0 0 0 .2rem rgba(72, 180, 97, 0.5)
+		}
+
+		.btn-info:not(:disabled):not(.disabled):active,
+		.btn-info:not(:disabled):not(.disabled).active {
+			color: #fff;
+			background-color: #117a8b;
+			border-color: #10707f
+		}
+
+		.btn-info:not(:disabled):not(.disabled):active:focus,
+		.btn-info:not(:disabled):not(.disabled).active:focus {
+			box-shadow: 0 0 0 .2rem rgba(58, 176, 195, 0.5)
+		}
+
+		.btn-warning:not(:disabled):not(.disabled):active,
+		.btn-warning:not(:disabled):not(.disabled).active {
+			color: #212529;
+			background-color: #d39e00;
+			border-color: #c69500
+		}
+
+		.btn-warning:not(:disabled):not(.disabled):active:focus,
+		.btn-warning:not(:disabled):not(.disabled).active:focus {
+			box-shadow: 0 0 0 .2rem rgba(222, 170, 12, 0.5)
+		}
+
+		.btn-danger:not(:disabled):not(.disabled):active,
+		.btn-danger:not(:disabled):not(.disabled).active {
+			color: #fff;
+			background-color: #bd2130;
+			border-color: #b21f2d
+		}
+
+		.btn-danger:not(:disabled):not(.disabled):active:focus,
+		.btn-danger:not(:disabled):not(.disabled).active:focus {
+			box-shadow: 0 0 0 .2rem rgba(225, 83, 97, 0.5)
+		}
+
+		.btn-light:not(:disabled):not(.disabled):active,
+		.btn-light:not(:disabled):not(.disabled).active {
+			color: #212529;
+			background-color: #dae0e5;
+			border-color: #d3d9df
+		}
+
+		.btn-light:not(:disabled):not(.disabled):active:focus,
+		.btn-light:not(:disabled):not(.disabled).active:focus {
+			box-shadow: 0 0 0 .2rem rgba(216, 217, 219, 0.5)
+		}
+
+		.btn-dark:not(:disabled):not(.disabled):active,
+		.btn-dark:not(:disabled):not(.disabled).active {
+			color: #fff;
+			background-color: #1d2124;
+			border-color: #171a1d
+		}
+
+		.btn-dark:not(:disabled):not(.disabled):active:focus,
+		.btn-dark:not(:disabled):not(.disabled).active:focus {
+			box-shadow: 0 0 0 .2rem rgba(82, 88, 93, 0.5)
+		}
+
+		.btn-outline-primary:not(:disabled):not(.disabled):active,
+		.btn-outline-primary:not(:disabled):not(.disabled).active {
+			color: #fff;
+			background-color: #3CAEA3;
+			border-color: #3CAEA3
+		}
+
+		.btn-outline-primary:not(:disabled):not(.disabled):active:focus,
+		.btn-outline-primary:not(:disabled):not(.disabled).active:focus {
+			box-shadow: 0 0 0 .2rem rgba(60, 174, 163, 0.5)
+		}
+
+		.btn-outline-secondary:not(:disabled):not(.disabled):active,
+		.btn-outline-secondary:not(:disabled):not(.disabled).active {
+			color: #212529;
+			background-color: #8A9CAC;
+			border-color: #8A9CAC
+		}
+
+		.btn-outline-secondary:not(:disabled):not(.disabled):active:focus,
+		.btn-outline-secondary:not(:disabled):not(.disabled).active:focus {
+			box-shadow: 0 0 0 .2rem rgba(138, 156, 172, 0.5)
+		}
+
+		.btn-outline-success:not(:disabled):not(.disabled):active,
+		.btn-outline-success:not(:disabled):not(.disabled).active {
+			color: #fff;
+			background-color: #28a745;
+			border-color: #28a745
+		}
+
+		.btn-outline-success:not(:disabled):not(.disabled):active:focus,
+		.btn-outline-success:not(:disabled):not(.disabled).active:focus {
+			box-shadow: 0 0 0 .2rem rgba(40, 167, 69, 0.5)
+		}
+
+		.btn-outline-info:not(:disabled):not(.disabled):active,
+		.btn-outline-info:not(:disabled):not(.disabled).active {
+			color: #fff;
+			background-color: #17a2b8;
+			border-color: #17a2b8
+		}
+
+		.btn-outline-info:not(:disabled):not(.disabled):active:focus,
+		.btn-outline-info:not(:disabled):not(.disabled).active:focus {
+			box-shadow: 0 0 0 .2rem rgba(23, 162, 184, 0.5)
+		}
+
+		.btn-outline-warning:not(:disabled):not(.disabled):active,
+		.btn-outline-warning:not(:disabled):not(.disabled).active {
+			color: #212529;
+			background-color: #ffc107;
+			border-color: #ffc107
+		}
+
+		.btn-outline-warning:not(:disabled):not(.disabled):active:focus,
+		.btn-outline-warning:not(:disabled):not(.disabled).active:focus {
+			box-shadow: 0 0 0 .2rem rgba(255, 193, 7, 0.5)
+		}
+
+		.btn-outline-danger:not(:disabled):not(.disabled):active,
+		.btn-outline-danger:not(:disabled):not(.disabled).active {
+			color: #fff;
+			background-color: #dc3545;
+			border-color: #dc3545
+		}
+
+		.btn-outline-danger:not(:disabled):not(.disabled):active:focus,
+		.btn-outline-danger:not(:disabled):not(.disabled).active:focus {
+			box-shadow: 0 0 0 .2rem rgba(220, 53, 69, 0.5)
+		}
+
+		.btn-outline-light:not(:disabled):not(.disabled):active,
+		.btn-outline-light:not(:disabled):not(.disabled).active {
+			color: #212529;
+			background-color: #f8f9fa;
+			border-color: #f8f9fa
+		}
+
+		.btn-outline-light:not(:disabled):not(.disabled):active:focus,
+		.btn-outline-light:not(:disabled):not(.disabled).active:focus {
+			box-shadow: 0 0 0 .2rem rgba(248, 249, 250, 0.5)
+		}
+
+		.btn-outline-dark:not(:disabled):not(.disabled):active,
+		.btn-outline-dark:not(:disabled):not(.disabled).active {
+			color: #fff;
+			background-color: #343a40;
+			border-color: #343a40
+		}
+
+		.btn-outline-dark:not(:disabled):not(.disabled):active:focus,
+		.btn-outline-dark:not(:disabled):not(.disabled).active:focus {
+			box-shadow: 0 0 0 .2rem rgba(52, 58, 64, 0.5)
+		}
+
+		.btn-link {
+			font-weight: 400;
+			color: #20639B;
+			text-decoration: none
+		}
+
+		.btn-link:hover {
+			color: #133b5c;
+			text-decoration: underline
+		}
+
+		.btn-link:focus {
+			text-decoration: underline;
+			box-shadow: none
+		}
+
+		.btn-link:disabled {
+			color: #6c757d;
+			pointer-events: none
+		}
+
+		.btn-lg {
+			padding: .5rem 1.25rem;
+			font-size: 1.09375rem;
+			line-height: 1.5;
+			border-radius: .3rem
+		}
+
+		.custom-control-input:focus:not(:checked)~.custom-control-label::before {
+			border-color: #91d9d2
+		}
+
+		.custom-control-input:not(:disabled):active~.custom-control-label::before {
+			color: #fff;
+			background-color: #b7e6e1;
+			border-color: #b7e6e1
+		}
+
+		.card {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			min-width: 0;
+			word-wrap: break-word;
+			background-color: #fff;
+			background-clip: border-box;
+			border: 1px solid rgba(0, 0, 0, 0.125);
+			border-radius: .25rem
+		}
+
+		.card-body {
+			flex: 1 1 auto;
+			min-height: 1px;
+			padding: 1.25rem
+		}
+
+		.card-title {
+			margin-bottom: .75rem
+		}
+
+		.card-header {
+			padding: .75rem 1.25rem;
+			margin-bottom: 0;
+			background-color: rgba(0, 0, 0, 0.03);
+			border-bottom: 1px solid rgba(0, 0, 0, 0.125)
+		}
+
+		.card-header:first-child {
+			border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0
+		}
+
+		.badge {
+			display: inline-block;
+			padding: .25em .4em;
+			font-size: 75%;
+			font-weight: 700;
+			line-height: 1;
+			text-align: center;
+			white-space: nowrap;
+			vertical-align: baseline;
+			border-radius: .25rem;
+			transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			.badge {
+				transition: none
+			}
+		}
+
+		.badge-pill {
+			padding-right: .6em;
+			padding-left: .6em;
+			border-radius: 10rem
+		}
+
+		.close:not(:disabled):not(.disabled):hover,
+		.close:not(:disabled):not(.disabled):focus {
+			opacity: .75
+		}
+
+		.bg-light {
+			background-color: #f8f9fa !important
+		}
+
+		.d-block {
+			display: block !important
+		}
+
+		.float-left {
+			float: left !important
+		}
+
+		.float-right {
+			float: right !important
+		}
+
+		@supports (position: sticky) {}
+
+		.mt-1 {
+			margin-top: .25rem !important
+		}
+
+		.ml-2 {
+			margin-left: .5rem !important
+		}
+
+		.mt-3 {
+			margin-top: 1rem !important
+		}
+
+		.mb-3 {
+			margin-bottom: 1rem !important
+		}
+
+		.p-4 {
+			padding: 1.5rem !important
+		}
+
+		.text-center {
+			text-align: center !important
+		}
+
+		.text-secondary {
+			color: #8A9CAC !important
+		}
+
+		.text-success {
+			color: #28a745 !important
+		}
+
+		.text-muted {
+			color: #6c757d !important
+		}
+
+		@media print {
+
+			*,
+			*::before,
+			*::after {
+				text-shadow: none !important;
+				box-shadow: none !important
+			}
+
+			h2 {
+				orphans: 3;
+				widows: 3
+			}
+
+			h2 {
+				page-break-after: avoid
+			}
+
+			@page {
+				size: a3
+			}
+
+			body {
+				min-width: 992px !important
+			}
+
+			.container {
+				min-width: 992px !important
+			}
+
+			.badge {
+				border: 1px solid #000
+			}
+		}
+
+		.k-button.k-no-focus:not(:hover)::before {
+			opacity: 0
+		}
+
+		.k-dropdown-button:active>.k-button:not(:disabled),
+		.k-dropdown-button.k-state-active>.k-button:not(:disabled) {
+			box-shadow: inset 0 2px 2px 0 rgba(0, 0, 0, 0.06)
+		}
+
+		@keyframes autoFillEnd {
+			from {}
+
+			to {}
+		}
+
+		.k-autofill:not(:-webkit-autofill) {
+			animation-name: autoFillEnd
+		}
+
+		.k-textbox:not(:-webkit-autofill) {
+			animation-name: autoFillEnd
+		}
+
+		.k-combobox>:hover {
+			border-color: rgba(0, 0, 0, 0.15);
+			color: #212121;
+			background-color: #fff
+		}
+
+		.k-dialog-button-layout-stretched .k-button:not(:hover):not(.k-state-hover):not(:active):not(.k-state-active) {
+			color: inherit;
+			background: none
+		}
+
+		.k-dialog-button-layout-stretched .k-primary:not(:hover):not(.k-state-hover):not(:active):not(.k-state-active) {
+			color: #3CAEA3
+		}
+
+		html,
+		body {
+			height: 100%
+		}
+
+		.main-body {
+			min-height: 100%;
+			margin-bottom: -125px
+		}
+
+		.main-body:after {
+			content: "";
+			display: block
+		}
+
+		.main-body:after {
+			height: 125px
+		}
+
+		.entry-badges .card .badge {
+			font-size: 100%;
+			padding: 8px 15px;
+			color: white;
+			margin-top: .5rem
+		}
+
+		.entry-badges .card .card-title {
+			margin-top: .5rem
+		}
+
+		.employee-badge .badge {
+			background-color: #FF8D1C
+		}
+
+		.employee-badge .badge:after {
+			content: "DOE EMPLOYEE"
+		}
+
+		.employee-badge .badge-pill-student:after {
+			content: "STUDENT" !important
+		}
+
+		.employee-badge .card-header {
+			background-color: #173F5F;
+			color: white
+		}
+
+		@media (max-width: 1199.98px) {
+			.main-wrap {
+				position: relative;
+				top: 2.5rem
+			}
+		}
+
+		@media (max-width: 767.98px) {
+			.entry-badges .card-header {
+				text-align: center
+			}
+
+			.entry-badges .card-header .float-left,
+			.entry-badges .card-header .float-right {
+				float: none !important
+			}
+		}
+	</style>
+
+</head>
+
+<body class="" style="position: relative; min-height: 100%; top: 0px;">
+	<script>
+		const urlParams = new URLSearchParams(window.location.search);
+		const persons = {
+                'e': 'Evan Pokalyukhin',
+				'd': 'Daniil Sabirov',
+				'a': 'Anastasiia Sabirova'
+			};
+		var person = persons.a;
+		var hsHours = '7';
+		var hsMinutes = '33';
+		var hsTime = function() {
+			return hsHours + ':' + hsMinutes;
+		};
+
+		// set person: ?p=d, ?p=a
+		if (!! urlParams.get('p')) {
+			person = persons[urlParams.get('p')];
+		}
+
+		// set time
+		if(!! urlParams.get('t')) {
+			hsTime = urlParams.get('t');
+		}
+
+		// set hours
+		if (!! urlParams.get('h')) {
+			hsHours = urlParams.get('h');
+		}
+
+
+		// set minutes
+		if (!! urlParams.get('m')) {
+			hsMinutes = urlParams.get('m');
+		}
+
+		// help
+		if (urlParams.get('help') === '') {
+			document.write('<div style="margin-left: 20px;">URL queries: <br>p=d or p=a - person<br>t=7:34 - time<br>h=9 - hour<br>m=23 - minutes</div>');
+		}
+
+	</script>
+	<div class="main-body">
+		<div class="main-wrap container" id="doe_employee_layout">
+			<main>
+				<div class="row">
+					<div class="col-lg-8 offset-lg-2">
+						<div class="tracker-layout" id="guest_badges">
+							<div id="guest_badges_content">
+								<div>
+									<div class="entry-badges">
+										<div class="card bg-light mb-3 employee-badge">
+											<div class="card-header">
+												<svg class="svg-inline--fa fa-user-circle fa-w-16 fa-3x text-secondary float-left"
+													aria-hidden="true" focusable="false" data-prefix="fas"
+													data-icon="user-circle" role="img"
+													xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"
+													data-fa-i2svg="">
+													<path fill="currentColor"
+														d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z">
+													</path>
+												</svg>
+												<h2 class="card-title float-left ml-2">
+													<script>
+														document.write(person);
+													</script>
+												</h2>
+												<div class="badge float-right badge-pill-student badge-pill"> </div>
+											</div>
+											<div class="card-body text-center p-4">
+												<div class="h2">
+													<svg class="svg-inline--fa fa-check-circle fa-w-16 text-success fa-4x mb-3"
+														aria-hidden="true" focusable="false" data-prefix="far"
+														data-icon="check-circle" role="img"
+														xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+														data-fa-i2svg="">
+														<path fill="currentColor"
+															d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 48c110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200-110.532 0-200-89.451-200-200 0-110.532 89.451-200 200-200m140.204 130.267l-22.536-22.718c-4.667-4.705-12.265-4.736-16.97-.068L215.346 303.697l-59.792-60.277c-4.667-4.705-12.265-4.736-16.97-.069l-22.719 22.536c-4.705 4.667-4.736 12.265-.068 16.971l90.781 91.516c4.667 4.705 12.265 4.736 16.97.068l172.589-171.204c4.704-4.668 4.734-12.266.067-16.971z">
+														</path>
+													</svg>
+
+
+												</div>
+												<div class="h2 text-success">
+													Cleared to Enter DOE Schools and Facilities
+												</div>
+												<div class="h1 text-success">
+													<script>
+														var monthNames = [
+															"January", "February", "March", "April", "May", "June", 
+															"July", "August", "September", "October", "November", "December"
+														];
+														var weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+												
+														var d = new Date();
+														var dateText = weekdays[d.getDay()] 
+															+ ", " +  monthNames[d.getMonth()]
+															+ " " + d.getDate() 
+															+ ", " + d.getFullYear() 
+															+ " " + hsTime() + " AM";
+														document.write(dateText);
+													</script>
+												</div>
+												<div class="mt-3">
+													<div class="mb-3">
+														Please be advised that you must be wearing a face covering to
+														enter DOE facilities.
+													</div>
+	
+													<small class="d-block text-muted">Please re-take daily or
+														immediately if your symptoms change.</small>
+												</div>
+
+												<small class="mt-1 d-block text-muted">(this badge expires at
+													midnight)</small>
+
+												<div class="text-center">
+													<a href="https://healthscreening.schools.nyc/"
+														class="btn btn-link btn-lg mt-3">
+														Re-take this Screening
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+	</div>
+</body>
+
+</html>
